@@ -10,7 +10,7 @@ const {
 } = process.env;
 
 let sequelize =
-  process.env.NODE_ENV === "production"
+  /* process.env.NODE_ENV === "production"
     ? new Sequelize({
       database: DB_NAME,
       dialect: "postgres",
@@ -33,7 +33,7 @@ let sequelize =
       },
       ssl: true,
     })
-    : new Sequelize(
+    : */ new Sequelize(
       `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/dogs`,
       { logging: false, native: false }
     );
